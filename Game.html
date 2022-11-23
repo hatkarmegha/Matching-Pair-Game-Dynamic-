@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Matching Pair Game</title>
+    <link rel="stylesheet" href="style.css">
+   
+    </head>
+    <body>
+        <h1>Matching Pair Game</h1>
+        <div class="no_of_levels">
+            <label class="game_label">Level</label>
+            <input type="button" value="3 X 4" onclick="displaycards('12')">
+            <input type="button" value="4 X 4" onclick="displaycards('16')">
+            <input type="button" value="5 X 4" onclick="displaycards('20')">
+        </div>
+        <div class="container" id="gameboard"></div>
+        <div class="score">
+           <label class="game_label"> Moves :</label><label class="counter_label" id="no_of_move"></label><br><br>   
+            <label class="game_label">Pairs    :</label><label class="counter_label" id="no_of_pair"></label>
+        </div>
+        </body>
+        <script src="pairgamescript.js"></script>
+    </html>
