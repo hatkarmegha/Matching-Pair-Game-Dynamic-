@@ -1,0 +1,128 @@
+.game_label, .counter_label {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #c324dc;
+  font-weight: bold;
+}
+
+.front, .back {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+body {
+  background-color: lightgray;
+}
+
+.container {
+  margin: 10px 0 0 430px;
+  max-width: 400px;
+  height: 250px;
+  -webkit-perspective: 600px;
+          perspective: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.no_of_levels {
+  float: left;
+  margin: 50px 0 0 100px;
+  width: 200px;
+  height: 200px;
+}
+
+input {
+  margin: 10px 0 0 100px;
+  width: 2cm;
+  height: 1cm;
+  background-color: #e12b95;
+  font-size: 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+input:hover {
+  background-color: #c324dc;
+}
+
+.game_label {
+  margin: 10px 0 0 100px;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  margin: 5px;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.front {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e12b95), to(#c324dc));
+  background-image: linear-gradient(#e12b95, #c324dc);
+}
+
+.back {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #c324dc;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.flipped {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.match {
+  pointer-events: none;
+}
+
+.restart {
+  pointer-events: auto;
+}
+
+.score {
+  float: right;
+  width: 400px;
+  height: 400px;
+  margin-top: -150px;
+}
+
+.counter_label {
+  margin: 10px 0 0 20px;
+}
+/*# sourceMappingURL=style.css.map */

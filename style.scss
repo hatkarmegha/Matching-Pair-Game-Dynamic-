@@ -1,0 +1,118 @@
+$mycolor1:#e12b95;
+$mycolor2:#c324dc;
+$fontfamily: Verdana, Geneva, Tahoma, sans-serif;
+
+@mixin card_layout {
+    width: 80px;
+    height: 80px;  
+    border-radius: 10px;
+}
+
+%label_layout{
+    font-size: 20px;
+    font-family:$fontfamily;
+    color: $mycolor2;
+    font-weight: bold;
+}
+
+%card_face {
+    position:absolute;  
+    backface-visibility: hidden;  
+}
+
+body{
+    background-color: lightgray;
+}
+
+.container {
+    margin:10px 0 0 430px;
+    max-width: 400px;
+    height: 250px;
+    perspective: 600px;  
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.no_of_levels {
+    float: left;
+    margin:50px 0 0 100px;
+    width: 200px;
+    height: 200px; 
+}
+
+input {
+    margin:10px 0 0 100px;
+    width: 2cm;
+    height: 1cm;
+    background-color:$mycolor1;
+    font-size: 20px;
+    color:white;
+    border-radius: 5px;
+}
+
+input:hover {
+    background-color:$mycolor2;
+}
+
+.game_label {
+    @extend %label_layout;
+    margin:10px 0 0 100px;
+}
+
+.card {
+    @include card_layout();
+    margin:5px;
+    position: relative; 
+    transition:1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.front {
+    @include card_layout();
+    @extend %card_face;
+   background-image:linear-gradient($mycolor1,$mycolor2);
+}
+
+.back {  
+    @include card_layout();
+    @extend %card_face;
+   transform: rotateY(180deg);
+}
+
+img {
+    @include card_layout();
+ }
+
+h1 {
+    text-align: center;
+    font-family:$fontfamily;
+    color:$mycolor2;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+.match {
+    pointer-events: none;
+}
+
+.restart {
+    pointer-events:auto;
+}
+
+.score {
+    float:right;
+    width: 400px;
+    height: 400px;
+    margin-top: -150px;
+}
+
+.counter_label{
+    @extend %label_layout;
+    margin:10px 0 0 20px;
+}
